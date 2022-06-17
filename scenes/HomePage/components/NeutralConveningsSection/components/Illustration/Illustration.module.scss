@@ -1,0 +1,73 @@
+@import '../../../../../../styles/variables/colors';
+@import '../../../../../../styles/mixins/breakpoints';
+
+.horizontal {
+  position: relative;
+  width: 84vw;
+  top: -10px;
+  left: 0;
+  z-index: -1;
+
+  &Line {
+    stroke-dashoffset: 4074px;
+    stroke-dasharray: 4074px;
+  }
+
+  &Active {
+    path {
+      animation: animationHorizontalLine 7s linear none;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @include media-fullhd {
+    width: 100vw;
+  }
+
+  @include media-md {
+    display: none;
+  }
+}
+
+.vertical {
+  display: none;
+
+  &Line {
+    stroke-dashoffset: 1264px;
+    stroke-dasharray: 1264px;
+  }
+
+  &Active {
+    path {
+      animation: animationVerticalLine 3s linear none;
+      animation-fill-mode: forwards;
+    }
+}
+
+@include media-md {
+  display: block;
+  width: 100vw;
+}
+
+}
+
+@keyframes animationHorizontalLine {
+  0% {
+    stroke-dashoffset: 4074px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes animationVerticalLine {
+  0% {
+    stroke-dashoffset: -1264px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+

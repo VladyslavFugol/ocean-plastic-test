@@ -1,0 +1,33 @@
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/breakpoints';
+
+.button {
+  padding: 18px 40px;
+  color: $color-black;
+  background-color: $color-white;
+  border-radius: 100px;
+
+  @include media-md {
+    padding: 12px 24px;
+  }
+
+  &.PrimeGreen {
+    background-color: $prime-green;
+  }
+
+  &.oPrimeGreen {
+    color: $prime-green;
+    background: none;
+    border: 2px solid $prime-green;
+  }
+
+  &.oBlack {
+    color: $main-black;
+    background: none;
+    border: 2px solid $main-black;
+  }
+
+  &.disabled {
+    background: gray;
+  }
+}

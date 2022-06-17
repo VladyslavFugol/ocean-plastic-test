@@ -1,0 +1,97 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.container {
+  @include media-xl {
+    padding: 0 45px;
+  }
+
+  @include media-sm {
+    padding: 0 16px;
+  }
+}
+
+.content {
+  padding: 96px 10px;
+
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(81, 81, 82, 0.3);
+
+  @include media-xl {
+    padding: 96px 0;
+  }
+
+  @include media-lg {
+    padding: 56px 0;
+    flex-direction: column;
+  }
+}
+
+
+.title {
+  display: none;
+
+  @include media-lg {
+    display: block;
+    margin: 0 0 24px 0;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  margin: 0 64px 0 0;
+
+  @include media-lg {
+    margin: 0 0 24px 0;
+  }
+
+  img {
+    border-radius: 24px;
+    object-fit: cover;
+  }
+}
+
+.popular {
+  width: 400px;
+
+  &Container {
+    margin: 0 0 40px 0;
+
+    @include media-lg {
+      margin: 0 0 32px 0;
+    }
+  }
+
+  &Title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 130%;
+
+    @include media-lg {
+      display: none;
+    }
+  }
+
+  @include media-lg {
+    width: auto;
+  }
+}
+
+.twitter {
+  margin: 0 24px 0 0;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+
+  span {
+    margin: 0 0 0 12px;
+  }
+}

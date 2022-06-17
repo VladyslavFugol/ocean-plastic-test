@@ -1,0 +1,70 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.feedback {
+  padding: 96px 0;
+
+  @include media-md {
+    padding: 56px 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-xl {
+    padding: 0 45px;
+  }
+
+  @include media-md {
+    align-items: flex-start;
+  }
+
+  @include media-sm {
+    padding: 0 16px;
+  }
+}
+
+.title {
+  margin: 0 0 40px 0;
+  text-align: center;
+
+  @include media-md {
+    text-align: left;
+  }
+}
+
+.slider {
+  width: 950px;
+  border-bottom: 1px solid #080808;
+
+  @include media-lg {
+    width: 100%;
+  }
+}
+
+.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 0;
+
+  li {
+    flex-grow: 1;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  :global(li.slick-active) {
+    button {
+      height: 4px;
+      background: #18747A;
+      opacity: 0.6;
+    }
+  }
+}

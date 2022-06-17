@@ -1,0 +1,48 @@
+@import '../../../../../../styles/variables/colors';
+@import '../../../../../../styles/mixins/breakpoints';
+
+.container {
+  img {
+    object-fit: cover;
+    border-radius: 24px;
+  }
+
+  &.big {
+    width: 679px;
+    height: 520px;
+
+    @include media-lg {
+      width: 479px;
+      height: 420px;
+    }
+
+    @include media-md {
+      width: 379px;
+      height: 320px;
+    }
+
+    @include media-sm {
+      width: 296px;
+      height: 224px;
+    }
+  }
+
+  &.small {
+    width: 400px;
+    height: 360px;
+
+    @include media-lg {
+      width: 300px;
+      height: 260px;
+    }
+
+    @include media-md {
+      width: 200px;
+      height: 160px;
+    }
+
+    @include media-sm {
+      width: 174px;
+    }
+  }
+}

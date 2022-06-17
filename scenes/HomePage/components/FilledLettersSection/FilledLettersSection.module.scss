@@ -1,0 +1,84 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.filled {
+  padding: 96px 0 0 0;
+
+  @include media-md {
+    padding: 36px 0 0 0;
+  }
+}
+
+.container {
+  @include media-xl {
+    padding: 0 45px;
+  }
+
+  @include media-sm {
+    padding: 0 16px;
+  }
+}
+
+.title {
+  margin: 0 0 96px 0;
+
+  @include media-lg {
+    margin: 0 0 32px 0;
+  }
+}
+
+.text {
+  padding: 0 0 0 75px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 110%;
+  color: $medium-grey;
+  background: $main-grey;
+  background: linear-gradient(#000000, #000000) $medium-grey no-repeat 0 0;
+  background-size: 0 100%;
+  transition: all 1.5s ease;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include media-lg {
+    display: inline;
+    padding: 0;
+  }
+
+  @include media-sm {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  @include media-xs {
+    font-size: 20px;
+  }
+}
+
+.active {
+  &First {
+    animation: fillAnimation 0.5s linear;
+    animation-fill-mode: forwards;
+  }
+
+  &Second {
+    animation: fillAnimation 0.5s linear 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  &Thirty {
+    animation: fillAnimation 0.5s linear 1s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes fillAnimation{
+  0% {
+    background-size: 0 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+

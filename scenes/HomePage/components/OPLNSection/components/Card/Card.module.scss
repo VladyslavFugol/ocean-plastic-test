@@ -1,0 +1,131 @@
+@import '../../../../../../styles/variables/colors';
+@import '../../../../../../styles/mixins/breakpoints';
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: $color-white;
+  text-transform: uppercase;
+  border-radius: 24px;
+  transition: 0.8s;
+
+  div {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+  }
+
+  span {
+    margin: 0 35px 0 0;
+    font-size: 96px;
+    -webkit-text-stroke: 2px $color-white;
+    -webkit-text-fill-color: transparent;
+
+    @include media-lg {
+      margin: 0 20px 0 0;
+      font-size: 65px;
+    }
+
+    @include media-xs {
+      font-size: 40px;
+    }
+  }
+
+  &.black {
+    background: linear-gradient($color-black, $color-black) $color-white no-repeat 100% 0;
+    background-size: 0 100%;
+
+    @include media-md {
+      background: linear-gradient($color-black, $color-black) $color-white no-repeat 0 0;
+      background-size: 0 100%;
+    }
+  }
+
+  &.cappuccino {
+    background: linear-gradient($bg-white, $bg-white) $color-white no-repeat 100% 0;
+    background-size: 0 100%;
+
+    @include media-md {
+      background: linear-gradient($bg-white, $bg-white) $color-white no-repeat 0 0;
+      background-size: 0 100%;
+    }
+  }
+
+  &.primeGreen {
+    background: linear-gradient($prime-green, $prime-green) $color-white no-repeat 100% 0;
+    background-size: 0 100%;
+
+    @include media-md {
+      background: linear-gradient($prime-green, $prime-green) $color-white no-repeat 0 0;
+      background-size: 0 100%;
+    }
+  }
+
+  &.smallSize {
+    width: 465px;
+    height: 144px;
+
+    @include media-lg {
+      width: 278px;
+      height: 88px;
+    }
+
+    @include media-xs {
+      width: 230px;
+    }
+  }
+
+  &.bigSize {
+    width: 576px;
+    height: 144px;
+
+    @include media-lg {
+      width: 344px;
+      height: 88px;
+    }
+
+    @include media-xs {
+      width: 250px;
+    }
+  }
+
+  @include media-lg {
+    font-size: 15px;
+  }
+
+  @include media-xs {
+    font-size: 12px;
+  }
+}
+
+.active {
+  div {
+    animation: animationText 2s ease 0.6s;
+    animation-fill-mode: forwards;
+  }
+
+  &.black {
+    background-size: 100% 100%;
+  }
+
+  &.cappuccino {
+    background-size: 100% 100%;
+  }
+
+  &.primeGreen {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes animationText {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

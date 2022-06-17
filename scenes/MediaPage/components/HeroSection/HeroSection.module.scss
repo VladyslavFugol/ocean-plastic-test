@@ -1,0 +1,92 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.hero {
+  position: relative;
+  padding: 130px 0 0 0;
+  overflow: hidden;
+
+  @include media-md {
+    padding: 100px 0 0 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  @include media-xl {
+    min-height: auto;
+    padding: 170px 45px 120px 45px;
+  }
+
+  @include media-md {
+    min-height: auto;
+    margin: 50px 0 0 0;
+    padding: 0 45px 56px 45px;
+  }
+
+  @include media-sm {
+    padding: 35px 16px 56px 16px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px 0 75px;
+
+  @include media-lg {
+    padding: 0;
+  }
+
+  @include media-md {
+    flex-direction: column;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  margin: 0 80px 0 0;
+
+  @include media-md {
+    width: auto;
+    margin: -200px 0 0 0;
+    order: 2;
+  }
+
+  @include media-xs {
+    margin: -150px 0 0 0;
+  }
+
+  p {
+    width: 350px;
+    margin: 0 0 40px 0;
+
+    @include media-md {
+      margin: 0 0 24px 0;
+    }
+
+    @include media-sm {
+      width: auto;
+    }
+  }
+}
+
+.title {
+  margin: 0 0 40px 0;
+  font-size: 80px;
+  line-height: 105%;
+
+  @include media-md {
+    width: 240px;
+    margin: 0 0 24px 0;
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+  }
+}
+

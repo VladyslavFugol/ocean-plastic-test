@@ -1,0 +1,100 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.gallery {
+  position: relative;
+  padding: 96px 0 0 0;
+  min-height: 770px;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    background-color: $bg-white;
+    z-index: -1;
+  }
+
+  @include media-lg {
+    min-height: 670px;
+  }
+
+  @include media-md {
+    padding: 56px 0;
+    min-height: 500px;
+  }
+
+
+  @include media-sm {
+    min-height: 432px;
+  }
+}
+
+.container {
+  @include media-xl {
+    padding: 0 45px;
+  }
+
+  @include media-sm {
+    padding: 0 16px;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 72px 0 75px;
+
+  @include media-lg {
+    padding: 0;
+  }
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+
+  svg {
+    cursor: pointer;
+    margin: 0 10px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @include media-md {
+    display: none;
+  }
+}
+
+.counter {
+  width: 80px;
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 700;
+
+  @include media-md {
+    display: none;
+  }
+}
+
+.slider {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  margin: 0 0 0 -18px;
+
+  &Image {
+    margin: 0 15px;
+  }
+
+  @include media-md {
+    padding: 0;
+  }
+}
+

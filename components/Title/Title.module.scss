@@ -1,0 +1,23 @@
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/breakpoints';
+
+.title {
+  margin: 0 0 40px 0;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 110%;
+  color: $main-black;
+
+  strong {
+    display: block;
+  }
+
+  @include media-lg {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  @include media-sm {
+    width: auto;
+  }
+}

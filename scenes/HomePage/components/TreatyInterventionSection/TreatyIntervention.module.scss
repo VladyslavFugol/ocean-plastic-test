@@ -1,0 +1,113 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.treaty {
+  color: $color-white;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 84%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $main-black;
+    border-radius: 24px;
+    z-index: -1;
+
+    @include media-xl {
+      left: 45px;
+    }
+
+    @include media-lg {
+      width: 80%;
+      height: 100%;
+      left: 0;
+      border-radius: 16px;
+    }
+
+    @include media-md {
+      width: 100%;
+      height: 80%;
+      border-radius: 16px;
+    }
+
+    @include media-xs {
+      height: 90%;
+    }
+  }
+
+  @include media-xl {
+    padding: 40px 45px;
+  }
+
+  @include media-lg {
+    padding: 0 45px;
+  }
+
+  @include media-sm {
+    padding: 0 16px;
+  }
+}
+
+.title {
+  color: $color-white;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 75px;
+
+  p {
+    width: 560px;
+    margin: 0 0 40px 0;
+
+    @include media-lg {
+      width: 370px;
+    }
+
+    @include media-md {
+      width: auto;
+      margin: 0 0 32px 0;
+    }
+  }
+
+  @include media-lg {
+    padding: 56px 0;
+  }
+
+  @include media-md {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.button {
+  color: $color-white;
+
+  @include media-md {
+    padding: 12px 24px;
+    margin: 0 0 64px 0;
+  }
+
+  @include media-xs {
+    padding: 8px 12px;
+  }
+}
+
+.image {
+  @include media-md {
+    position: relative;
+    width: 130%;
+    left: -15%;
+  }
+}
+

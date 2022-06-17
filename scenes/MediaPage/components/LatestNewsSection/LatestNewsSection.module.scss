@@ -1,0 +1,71 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.latest {
+  padding: 96px 0;
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+
+  @include media-md {
+    padding: 56px 0;
+    min-height: 450px;
+  }
+}
+
+.container {
+  @include media-xl {
+    padding: 0 45px;
+  }
+
+  @include media-sm {
+    padding: 0 16px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  @include media-md {
+    margin: 0 0 24px 0;
+  }
+}
+
+.slider {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  margin: 0 0 0 -18px;
+
+  &Image {
+    margin: 0 15px;
+
+    @include media-md {
+      margin: 0 12px;
+    }
+  }
+
+  @include media-md {
+    padding: 0;
+  }
+}
+
+.arrows {
+  display: flex;
+
+  svg {
+    cursor: pointer;
+    margin: 0 10px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @include media-md {
+    display: none;
+  }
+}

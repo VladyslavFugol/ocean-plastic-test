@@ -1,0 +1,152 @@
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/breakpoints';
+
+.footer {
+  @include media-xl {
+    padding: 0 45px;
+  }
+
+  @include media-sm {
+    padding: 0 16px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 0 40px 0;
+  border-top: 1px solid rgba(8, 8, 9, .4);
+
+  @include media-md {
+    padding: 32px 0 40px 0;
+  }
+}
+
+.logo {
+  margin: 0 0 40px 0;
+
+  svg {
+    height: 144px;
+
+    @include media-md {
+      height: 96px;
+    }
+  }
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 0 40px 0;
+  margin: 0 0 32px 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @include media-lg {
+    grid-template-columns: repeat(2, minmax(150px, auto));
+    justify-items: start;
+  }
+
+  @include media-md {
+    border-bottom: 1px solid rgba(8, 8, 9, .4);
+    justify-content: flex-start;
+    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
+  }
+
+  @include media-xs {
+    grid-template-columns: repeat(2, minmax(120px, auto));
+  }
+}
+
+.twoLists {
+  display: flex;
+  flex-direction: row;
+  grid-column: 2 / span 2;
+
+  span {
+    color: $main-black;
+    opacity: 0.5;
+    margin: 0 0 16px 0;
+  }
+
+  @include media-md {
+    flex-direction: column;
+  }
+}
+
+.list {
+  li {
+    margin: 0 0 16px 0;
+  }
+
+  &Social {
+    li {
+      &:first-child {
+        margin: 16px 0 16px 0;
+      }
+    }
+  }
+
+  &Contact {
+    li {
+      &:first-child {
+        margin: 16px 0 16px 0;
+
+        @include media-md {
+          margin: 0 0 16px 0;
+        }
+      }
+    }
+  }
+}
+
+.social {
+  margin: 0 120px 0 0;
+
+  @include media-sm {
+    margin: 0;
+  }
+}
+
+.contact {
+  &Title {
+    @include media-md {
+      display: none;
+    }
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: $main-grey;
+  opacity: 0.8;
+  margin: 24px 0 0 0;
+
+  &Link {
+    text-decoration: underline;
+    margin: 0 3px;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  span {
+    margin: 0 0 0 12px;
+    opacity: 1;
+  }
+}
+
+
+

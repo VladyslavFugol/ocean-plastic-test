@@ -1,0 +1,49 @@
+@import '../variables/points';
+
+@mixin media-xs {
+  @media (max-width: $media-xs) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (max-width: $media-sm) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media (max-width: $media-md) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (max-width: $media-lg) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media (max-width: $media-xl) {
+    @content;
+  }
+}
+
+@mixin media-sm-height {
+  @media (max-height: 660px) {
+    @content
+  }
+}
+
+@mixin media-lg-height {
+  @media (min-height: 1000px) {
+    @content
+  }
+}
+
+@mixin media-fullhd {
+  @media (max-width: $media-fullhd) {
+    @content;
+  }
+}

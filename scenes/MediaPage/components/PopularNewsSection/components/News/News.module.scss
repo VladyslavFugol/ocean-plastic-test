@@ -1,0 +1,39 @@
+@import '../../../../../../styles/variables/colors';
+@import '../../../../../../styles/mixins/breakpoints';
+
+.news {
+  margin: 0 0 24px 0;
+
+  &Tag {
+    margin: 0 0 8px 0;
+
+    @include media-md {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+
+  &Text {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    margin: 0 0 8px 0;
+
+    @include media-md {
+      font-size: 18px;
+      line-height: 130%;
+      margin: 0;
+    }
+  }
+
+  &Date {
+    color: $main-grey;
+
+    @include media-md {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.learning {
+  position: relative;
+  padding: 96px 0;
+
+  @include media-md {
+    padding: 56px 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    left: 0;
+    bottom: 0;
+    background-color: $bg-white;
+    z-index: -1;
+
+    @include media-md {
+      height: 85%;
+    }
+  }
+}
+
+.container {
+  @include media-xl {
+    padding: 0 45px;
+  }
+
+  @include media-sm {
+    padding: 0 16px;
+  }
+}
+
+.content {
+  padding: 96px 72px 0 75px;
+
+  @include media-lg {
+    padding: 56px 0 0 0;
+  }
+
+  p {
+    width: 985px;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 150%;
+    margin: 0 0 32px 0;
+
+    @include media-xl {
+      width: 850px;
+    }
+
+    @include media-lg {
+      width: auto;
+    }
+
+    @include media-md {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+
+.title {
+  margin: 0 0 24px 0;
+}
+
+.button {
+  margin: 0 16px 0 0;
+
+  @include media-xs {
+    margin: 0 0 16px 0;
+  }
+}
+
+.image {
+  img {
+    border-radius: 24px;
+    object-fit: cover;
+
+    @include media-md {
+      border-radius: 16px;
+    }
+  }
+}
+
+.illustration {
+  margin: 48px 0 0 0;
+  padding: 0 72px 0 75px;
+
+  @include media-lg {
+    padding: 0;
+  }
+
+  @include media-md {
+    margin: 56px 0 0 0;
+  }
+}
+

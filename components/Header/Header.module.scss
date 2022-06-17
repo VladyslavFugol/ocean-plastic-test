@@ -1,0 +1,161 @@
+@import '../../styles/variables/colors';
+@import '../../styles/mixins/breakpoints';
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  &.white {
+    background-color: $color-white;
+  }
+
+  &.cappuccino {
+    background-color: $bg-white;
+  }
+
+  @include media-xl {
+    padding: 0 45px;
+  }
+
+  @include media-sm {
+    padding: 0 16px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+
+  &Active {
+    border-bottom: 1px solid rgba(81, 81, 82, 0.3);
+  }
+
+  @include media-md {
+    padding: 15px 0;
+  }
+}
+
+.logo {
+  svg {
+    height: 72px;
+
+    @include media-md {
+      height: 56px;
+    }
+  }
+}
+
+.navigation {
+  &Link {
+    margin: 0 30px;
+
+    @include media-lg {
+      margin: 0 10px;
+    }
+  }
+
+  @include media-md {
+    display: none;
+  }
+}
+
+.community {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  span {
+    letter-spacing: 0.02em;
+  }
+
+  strong {
+    letter-spacing: 0.04em;
+  }
+
+  ::before {
+    content: '✦';
+    position: absolute;
+    top: -15%;
+    left: -15%;
+
+    @include media-lg {
+      top: -10%;
+      left: -10%;
+    }
+
+  }
+
+  @include media-lg {
+    font-size: 12px;
+  }
+
+  @include media-md {
+    display: none;
+  }
+}
+
+.burger {
+  display: none;
+
+  @include media-md {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 15px;
+    z-index: 10;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 0;
+      left: 0;
+      background-color: $color-black;
+      transition: 0.3s;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $color-black;
+      transition: 0.3s;
+    }
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 7px;
+      left: 0;
+      background-color: $color-black;
+      transition: 0.3s;
+    }
+  }
+
+  &Active {
+    &::before {
+      top: 4px;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      bottom: 9px;
+      left: 0;
+      transform: rotate(-45deg);
+    }
+
+    span {
+      transform: scale(0);
+    }
+  }
+}

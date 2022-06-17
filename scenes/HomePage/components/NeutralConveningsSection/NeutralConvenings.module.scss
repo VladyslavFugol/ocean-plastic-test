@@ -1,0 +1,113 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.neutral {
+  padding: 96px 0;
+  overflow: hidden;
+
+  @include media-lg {
+    padding: 0 0 96px 0;
+  }
+
+  @include media-md {
+    padding: 56px 0;
+  }
+}
+
+.container {
+  @include media-xl {
+    padding: 0 45px;
+  }
+
+  @include media-sm {
+    padding: 0 16px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px 0 75px;
+  margin: 0 0 80px 0;
+
+  p {
+    padding: 0 0 0 20px;
+    width: 530px;
+
+    @include media-lg {
+      width: 480px;
+    }
+
+    @include media-md {
+      width: auto;
+      padding: 0;
+    }
+
+  }
+
+  @include media-lg {
+    padding: 0;
+  }
+
+  @include media-md {
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 0 32px 0;
+  }
+}
+
+.photos {
+  position: relative;
+
+  &First {
+    position: absolute;
+    top: 2%;
+    left: 9%;
+    width: 20%;
+
+    @include media-md {
+      top: 0;
+      left: 47%;
+      width: 40%;
+    }
+  }
+
+  &Second {
+    position: absolute;
+    width: 26%;
+    top: 24%;
+    left: 38%;
+
+    @include media-md {
+      top: 60%;
+      left: 28%;
+      width: 53%;
+    }
+
+  }
+
+  &Thirty {
+    position: absolute;
+    width: 24%;
+    top: 7%;
+    right: 5%;
+
+    @include media-fullhd {
+      width: 24%;
+      top: 10%;
+      right: 5%;
+    }
+
+    @include media-md {
+      top: 21%;
+      right: 57%;
+      width: 44%;
+    }
+  }
+
+
+}
+
+
+
+

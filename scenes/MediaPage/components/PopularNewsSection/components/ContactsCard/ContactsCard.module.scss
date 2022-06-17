@@ -1,0 +1,45 @@
+@import '../../../../../../styles/variables/colors';
+@import '../../../../../../styles/mixins/breakpoints';
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 24px;
+  padding: 20px 24px;
+  margin: 0 0 16px 0;
+  max-height: 64px;
+  white-space: nowrap;
+
+  @include media-sm {
+    white-space: normal;
+  }
+
+  span {
+    margin: 0 10px 0 0;
+  }
+
+  div {
+    white-space: nowrap;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &.PrimeGreen {
+    background-color: $prime-green;
+  }
+
+  &.LightGrey {
+    background-color: $light-grey;
+  }
+
+  &.white {
+    color: $color-white;
+  }
+
+  @include media-md {
+    padding: 16px;
+  }
+}
